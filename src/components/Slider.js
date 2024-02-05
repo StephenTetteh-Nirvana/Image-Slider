@@ -26,9 +26,15 @@ const Slider = ({images}) => {
 
   return (
     <div className="slider-container">
+
+           <div className="text-container">
+               <h1>{images[imageIndex].caption}</h1>
+           </div>
+
           <button className="leftArrowBtn" onClick={prevImage}><img src={LeftArrow}/></button>
           <img src={require(`../images/${images[imageIndex].src}`)} alt="Image Here"/>
           <button className="rightArrowBtn" onClick={nextImage}><img src={RightArrow}/></button>
+
 
           <div className="dots-container">
           {
